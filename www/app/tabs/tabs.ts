@@ -1,6 +1,6 @@
 import {Page} from 'ionic/ionic';
 import {Presentation} from '../presentation/presentation';
-import {TimelineHd} from '../timelinehd/timelinehd';
+import {TimelineHairDresser} from '../timelinehairdresser/timelinehairdresser';
 import {Look} from '../look/look';
 import {Login} from '../login/login';
 import {ProfileHairDresser} from '../profilehairdresser/profilehd';
@@ -13,7 +13,7 @@ import {ChooseProfile} from '../chooseprofile/chooseprofile';
 export class TabsPage {
   constructor() {
     this.PresentationRoot = Presentation;
-    this.TimelineHdRoot = TimelineHd;
+    this.TimelineHairDresserRoot = TimelineHairDresser;
     this.LookRoot = Look;
     this.LoginRoot = Login;
     this.ProfileHdRoot = ProfileHairDresser;
