@@ -1,12 +1,12 @@
-///<referenc path="../../../typings/angular2/angular2.d.ts" />
 import {Page, NavController, ViewController} from 'ionic/ionic';
+
+
 @Page({
-  templateUrl: 'app/dash/dash.html',
+  templateUrl:'app/look/look.html',
 })
-export class Dash {
+export class Look {
   constructor(nav: NavController, view: ViewController) {
     this.nav = nav;
     this.view = view;
   }
-
 }
