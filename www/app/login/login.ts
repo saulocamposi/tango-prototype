@@ -1,6 +1,6 @@
 import {Page, NavController, ViewController} from 'ionic/ionic';
-import {ProfileHairDresser} from '../profilehairdresser/profilehd';
 import {ChooseProfile} from '../chooseprofile/chooseprofile';
+import {TabsPage} from '../tabs/tabs';
 
 
 @Page({
@@ -13,7 +13,7 @@ export class Login {
   }
 
   sigIn(){
-    this.nav.push(ProfileHairDresser);
+    this.nav.push(TabsPage);
   }
 
   sigUp(){

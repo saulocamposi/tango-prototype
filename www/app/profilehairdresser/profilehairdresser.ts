@@ -2,7 +2,7 @@ import {Page, NavController, ViewController} from 'ionic/ionic';
 
 
 @Page({
-  templateUrl:'app/profilehairdresser/profilehd.html',
+  templateUrl:'app/profilehairdresser/profilehairdresser.html',
 })
 export class ProfileHairDresser {
   constructor(nav: NavController, view: ViewController) {
