@@ -7,7 +7,7 @@ import {ProfileHairDresser} from '../profilehairdresser/profilehd';
 import {ChooseProfile} from '../chooseprofile/chooseprofile';
 
 @Page({
-  templateUrl: 'app/tabs/tabs.html',
+  templateUrl: 'app/tabs/tabs.html'
 })
 
 export class TabsPage {

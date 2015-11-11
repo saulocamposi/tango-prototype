@@ -1,23 +1,13 @@
 import {App, Platform, StatusBar} from 'ionic/ionic';
-import {TabsPage} from './tabs/tabs';
-import {Friends} from './data/data';
+import {Presentation} from './presentation/presentation';
+
 
 @App({
-  template: '<ion-nav [root]="root"></ion-nav>',
-  providers: [Friends]
+  template: '<ion-nav [root]="PresentationRoot"></ion-nav>'
 })
 
-export class TabsPage {
-  constructor(platform: Platform) {
-    this.platform = platform;
-    this.initializeApp();
-    this.root = TabsPage;
-  }
-
-  initializeApp() {
-    this.platform.ready().then(() => {
-      console.log('Platform ready');
-      StatusBar.setStyle(StatusBar.DEFAULT);
-    });
+export class MyApp {
+  constructor() {
+    this.PresentationRoot = Presentation;
   }
 }
