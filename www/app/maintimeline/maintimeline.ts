@@ -1,19 +1,17 @@
 import {Page, NavController, ViewController} from 'ionic/ionic';
 import {Login} from '../login/login';
-import {MainTimeline} from '../maintimeline/maintimeline';
 
 @Page({
-  templateUrl:'app/presentation/presentation.html'
+  templateUrl:'app/maintimeline/maintimeline.html',
 })
-export class Presentation {
-
+export class MainTimeline {
   constructor(nav: NavController, view: ViewController) {
     this.nav = nav;
     this.view = view;
   }
 
-  goToMainTimeline(){
-    this.nav.push(MainTimeline);
+  goToLogin(){
+    this.nav.push(Login);
   }
 
 }
