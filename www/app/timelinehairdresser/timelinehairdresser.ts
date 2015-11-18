@@ -7,7 +7,7 @@ import {Clients} from '../data/client';
 
 @Page({
   templateUrl:'app/timelinehairdresser/timelinehairdresser.html',
-   providers: [Clients]
+   providers: [Clients]  
 })
 export class TimelineHairDresser {
 
@@ -17,7 +17,7 @@ export class TimelineHairDresser {
     this.clients = clients;
     this.looks = this.clients.all();
   }
-  
+
   showLook(){
     this.nav.push(Look);
   }

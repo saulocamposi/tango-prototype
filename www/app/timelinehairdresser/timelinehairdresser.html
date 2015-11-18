@@ -7,21 +7,26 @@
   <ion-title>Timeline Hair Dresser</ion-title>
 </ion-navbar>
 <ion-content class="has-header components-demo cards-bg" style="opacity: 1; transform: translateX(0%) translateZ(0px);">
-
   <scroll-content>
-    <ion-list>
-       <ion-item *ng-for="#look of looks">
+       <div *ng-for="#look of looks">
          <ion-card>
            <ion-item class="item">
              <ion-avatar item-left="">
-               <img (click)="showProfile()" src="http://ionicframework.com/docs/v2/components/demo/img/marty-avatar.png">
+               <img src="http://ionicframework.com/docs/v2/components/demo/img/marty-avatar.png" (click)="showProfile()" />
              </ion-avatar>
              <ion-item-content>
              <h2>Marty McFly</h2>
              <p>November 5, 1955</p>
            </ion-item-content>
          </ion-item>
-           <img (click)="showLook()" src="{{look.picture}}">
+
+           <div *ng-if="look.typeoflook == 'simple'">
+             <img src="{{look.picture}}" (click)="showLookSimple()" />
+           </div>
+           <div *ng-if="look.typeoflook == 'hairdresser'">
+             <img src="{{look.picture}}" (click)="showLook()"/>
+           </div>
+
            <ion-item actions="" class="demo-card item">
                <button clear="" item-left="" primary="" class="disable-hover icon-left">
                  <icon role="img" thumbs-up="" class="ion-ios-thumbs-up" aria-label="thumbs up"></icon>
@@ -41,10 +46,8 @@
                </ion-card-content>
              </ion-item>
          </ion-card>
-       </ion-item>
-     </ion-list>
+       </div>
   </scroll-content>
-
   <button fab fab-right  (click)="takePicture()">
   <icon is-active="true" role="img" class="ion-ios-camera-outline" aria-label="ion-ios-camera-outline"></icon>
   </button>

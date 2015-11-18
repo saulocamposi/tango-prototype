@@ -1,13 +1,17 @@
 import {Page, NavController, ViewController} from 'ionic/ionic';
 import {Login} from '../login/login';
+import {Clients} from '../data/client';
 
 @Page({
   templateUrl:'app/maintimeline/maintimeline.html',
+   providers: [Clients]
 })
 export class MainTimeline {
-  constructor(nav: NavController, view: ViewController) {
+  constructor(clients: Clients, nav: NavController, view: ViewController) {
     this.nav = nav;
     this.view = view;
+    this.clients = clients;
+    this.looks = this.clients.all();
   }
 
   goToLogin(){
