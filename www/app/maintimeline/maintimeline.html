@@ -15,9 +15,14 @@
   <scroll-content>
     <ion-list>
        <ion-item *ng-for="#look of looks">
-            <ion-card class="adv-map">
+            <ion-card>
               <div style="position: relative">
-                <img src="{{look.picture}}">
+                <div *ng-if="look.typeoflook == 'simple'">
+                  <img src="{{look.picture}}" (click)="showLookSimple()" />
+                </div>
+                <div *ng-if="look.typeoflook == 'hairdresser'">
+                  <img src="{{look.picture}}" (click)="showLook()"/>
+                </div>
                 <button class="fab-map disable-hover icon-only" fab="" fab-right="" fab-top="">
                   <icon heart></icon>
                 </button>
@@ -26,7 +31,7 @@
                 </ion-avatar>
               </div>
               <ion-item>
-                <p>Alguma descrição a respeito do Look</p>
+                <p>{{look.description}}</p>
               </ion-item>
               <ion-item actions="" class="demo-card item" style="padding-top: 15px; padding-bottom: 15px;">
                   <button clear="" item-left="" primary="" class="disable-hover icon-left">
@@ -40,7 +45,7 @@
                   <p class="time-ago" item-left="">
                     11h ago
                   </p>
-                </ion-item>            
+                </ion-item>
           </ion-card>
         </ion-item>
       </ion-list>

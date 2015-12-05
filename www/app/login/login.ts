@@ -3,7 +3,6 @@ import {ChooseProfile} from '../chooseprofile/chooseprofile';
 import {TabsPage} from '../tabs/tabs';
 import {TimelineHairDresser} from '../timelinehairdresser/timelinehairdresser';
 
-
 @Page({
   templateUrl:'app/login/login.html'
 })
