@@ -18,4 +18,9 @@ export class MainTimeline {
     this.nav.push(Login);
   }
 
+  goToLook(id,typeoflook){
+    
+    this.nav.push(Login);
+  }
+
 }

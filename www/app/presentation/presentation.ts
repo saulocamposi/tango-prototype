@@ -6,14 +6,12 @@ import {MainTimeline} from '../maintimeline/maintimeline';
   templateUrl:'app/presentation/presentation.html'
 })
 export class Presentation {
-
   constructor(nav: NavController, view: ViewController) {
     this.nav = nav;
     this.view = view;
   }
 
   goToMainTimeline(){
-    this.nav.push(MainTimeline);
+    this.nav.setRoot(MainTimeline);
   }
-
 }
